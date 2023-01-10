@@ -6,7 +6,6 @@ import { useParams } from "react-router-dom";
 
 const Respuesta = () => {
   const params = useParams();
-  console.log(params.id);
   const [respuesta, setRespuesta] = useState({});
 
   useEffect(() => {
