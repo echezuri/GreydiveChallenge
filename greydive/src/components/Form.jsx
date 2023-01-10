@@ -1,21 +1,13 @@
 import axios from "axios";
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import form from "../db/db.json";
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import swal from "sweetalert";
 
-
-
 const Form = () => {
-
   const [user, setUser] = useState("");
-  const {
-    register,
-    formState: { errors },
-    handleSubmit,
-  } = useForm();
+  const { register, handleSubmit } = useForm();
 
   const onSubmit = (data) => {
     axios

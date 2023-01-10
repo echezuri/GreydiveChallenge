@@ -24,7 +24,6 @@ Al acceder al componente <strong>RESPUESTA</strong> se muestra una tabla con las
 <li>React Hook Forms (Para gestionar la información obtenida en los campos del formulario)</li>
 <li>React Router Dom (Para manejar las rutas dentro de la aplicación)</li>
 <li>SweetAlert (Para generar el modal de confirmación luego del submit)</li>
-<li>useEffect y useState (Hooks para manejar los estados de los componentes)</li>
 </ul>
 
 <ul>Estilos:
