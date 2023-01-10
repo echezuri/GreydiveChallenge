@@ -23,7 +23,6 @@ const Respuesta = () => {
     <div id="respuesta">
       <h4>Registro {params.id}</h4>
       <p>Resultado de la encuesta</p>
-
       <table>
         <thead>
           <tr>
@@ -47,10 +46,6 @@ const Respuesta = () => {
           <tr>
             <td>País</td>
             <td>{respuesta.country_of_origin}</td>
-          </tr>
-          <tr>
-            <td>Acepta terminos y condiciones?</td>
-            <td>{respuesta.terms_and_conditions ? "Si" : "No"}</td>
           </tr>
         </tbody>
       </table>

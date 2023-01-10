@@ -1,8 +1,8 @@
 import axios from "axios";
 import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
-import form from "../commons/db.json";
-import greydive from "../greydive";
+import form from "../db/db.json";
+// import greydive from "../greydive";
 import { useState } from "react";
 import Respuesta from "./Respuesta";
 import { Link } from "react-router-dom";
@@ -11,15 +11,20 @@ import swal from "sweetalert";
 const URL = "https://drive.google.com/file/d/1hsOMsEHx5mjFSt0nIPovciai8DdLq0Nu";
 
 const Form = () => {
-  useEffect(() => {
-    console.log("holas");
-    console.log(user);
-    console.log("queseyo");
-  }, []);
+  // useEffect(() => {
+  //   console.log("holas");
+  //   console.log(user);
+  //   console.log("queseyo");
+  // }, []);
   const [user, setUser] = useState("");
-  const { register, handleSubmit } = useForm();
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+  } = useForm();
 
   const onSubmit = (data) => {
+    console.log(data);
     axios
       .post(
         "https://greydive-echezuri-default-rtdb.firebaseio.com/form.json",
@@ -45,7 +50,6 @@ const Form = () => {
               <div id={elemento.type}>
                 <label>{elemento.label}</label>
                 <input
-                  // class="form-control"
                   type={elemento.type}
                   key={i}
                   {...register(`${elemento.name}`, {
@@ -57,7 +61,6 @@ const Form = () => {
               <div id={elemento.type}>
                 <label>{elemento.label}</label>
                 <select
-                  // class="form-select"
                   {...register(`${elemento.name}`, {
                     required: elemento.required,
                   })}
@@ -79,8 +82,10 @@ const Form = () => {
       <div className="acceso-respuesta">
         {user !== "" ? (
           <>
-            <p>Puedes acceder a tu respuesta haciendo <Link to={`/respuesta/${user}`}>Click aquí</Link></p>
-            
+            <p>
+              Puedes acceder a tu respuesta haciendo{" "}
+              <Link to={`/respuesta/${user}`}>Click aquí</Link>
+            </p>
           </>
         ) : null}
       </div>

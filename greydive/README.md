@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+<p>Este proyecto es la resolución a un challenge para <strong>"Greydive"</strong>.</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<ul>Para iniciar:
 
-## Available Scripts
+<li>Clonar repositorio: https://github.com/echezuri/GreydiveChallenge.git</li>
+<li>Npm install desde una terminal en la carpeta descargada</li>
+<li>Npm start desde la misma terminal</li>
+<ul> Alternativa:
+<li>Ingresar al siguiente enlace</li>
+</ul></ul>
 
-In the project directory, you can run:
+<p>La app está compuesta de un componente <strong>HOME</strong>, que actúa como página de inicio. Donde simplemente se invita al usuario a realizar la encuesta.
 
-### `npm start`
+Al ingresar al componente <strong>FORM</strong>, se renderiza un formulario en base al archivo db.json ubicado dentro de la carpeta db. Este archivo es el proporcionado en https://drive.google.com/file/d/1hsOMsEHx5mjFSt0nIPovciai8DdLq0Nu.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Una vez completados todos los campos, se ejecuta el Submit desde el botón "Enviar", y se muestra un modal a modo de confirmación de la operación. Inmediatamente se genera un nuevo campo debajo con un acceso a la respuesta del formulario.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Al acceder al componente <strong>RESPUESTA</strong> se muestra una tabla con las respuestas proporcionadas por el usuario.</p>
 
-### `npm test`
+<ul>Se utilizó:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<li>Firebase (base de datos externa donde se almacenan las respuestas)</li>
+<li>Axios (Para guardar y traer la información desde la base de datos)</li>
+<li>React Hook Forms (Para gestionar la información obtenida en los campos del formulario)</li>
+<li>React Router Dom (Para manejar las rutas dentro de la aplicación)</li>
+<li>SweetAlert (Para generar el modal de confirmación luego del submit)</li>
+<li>useEffect y useState (Hooks para manejar los estados de los componentes)</li>
+</ul>
 
-### `npm run build`
+<ul>Estilos:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<li>En este caso utilicé CSS plano, sin ninguna librería de estilos.</li>
+<li>La aplicación funciona tanto en vista escritorio como movil.</li>
+</ul>
