@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <div id="home">
-      {/* <h1>Bienvenido</h1> */}
-      <div>
+       <div>
         <h3>
           A modo de challenge para la empresa GreyDive, te invito a completar la
           siguiente encuesta.

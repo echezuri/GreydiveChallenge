@@ -2,20 +2,14 @@ import axios from "axios";
 import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import form from "../db/db.json";
-// import greydive from "../greydive";
 import { useState } from "react";
-import Respuesta from "./Respuesta";
 import { Link } from "react-router-dom";
 import swal from "sweetalert";
 
-const URL = "https://drive.google.com/file/d/1hsOMsEHx5mjFSt0nIPovciai8DdLq0Nu";
+
 
 const Form = () => {
-  // useEffect(() => {
-  //   console.log("holas");
-  //   console.log(user);
-  //   console.log("queseyo");
-  // }, []);
+
   const [user, setUser] = useState("");
   const {
     register,
@@ -24,7 +18,6 @@ const Form = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
     axios
       .post(
         "https://greydive-echezuri-default-rtdb.firebaseio.com/form.json",
